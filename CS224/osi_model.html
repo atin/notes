@@ -11,7 +11,7 @@
 
   <title>
     
-      CS 224 - Computer Networks &middot; Atin Bainada
+      The OSI Model &middot; Atin Bainada
     
   </title>
 
@@ -152,15 +152,13 @@
       </div>
 
       <div class="container content"><div class="post">
-  <h1 class="post-title">CS 224 - Computer Networks</h1>
+  <h1 class="post-title">The OSI Model</h1>
   <span class="post-date"></span>
-  <h2 id="the-osi-model">The OSI Model</h2>
-
-<p>The <strong>Open Systems Interconnection</strong> (OSI) model is a conceptual model, created by the International Organization for Standardization. It characterize the communication functions of a computer system irrespective of the system’s underlying internal structure and technology.</p>
+  <p>The <strong>Open Systems Interconnection</strong> (OSI) model is a conceptual model, created by the International Organization for Standardization. It characterize the communication functions of a computer system irrespective of the system’s underlying internal structure and technology.</p>
 
 <p>TL;DR - The OSI model provides a standard for different computer systems to communicate using standard protocols.</p>
 
-<h3 id="7-layers-of-the-osi-model">7 Layers of the OSI Model</h3>
+<h2 id="7-layers-of-the-osi-model">7 Layers of the OSI Model</h2>
 
 <p>The following table from this <a href="https://en.wikipedia.org/wiki/OSI_model">wikipedia article</a> summarizes the functions of each layer.</p>
 
@@ -238,31 +236,31 @@
 <td style="background:#e9988a;">Transmission and reception of raw bit streams over a physical medium
 </td></tr></tbody></table>
 
-<h4 id="layer-1-physical-layer">Layer 1: Physical Layer</h4>
+<h3 id="layer-1-physical-layer">Layer 1: Physical Layer</h3>
 
 <p>This layer is responsible for the transmission and reception of raw data between a device and a physical transmission medium, such as cables and switches. It also converts the digital data into electrical, radio or optical signals to make it transferable via a physical medium.</p>
 
-<h4 id="layer-2-data-link-layer">Layer 2: Data Link Layer</h4>
+<h3 id="layer-2-data-link-layer">Layer 2: Data Link Layer</h3>
 
 <p>The data link layer provides node-to-node data transfer. In this layer data is transferred between two devices on the SAME network. DLL takes packet from the network layer and breaks them into smaller pieces called frames. DLL detects and possibly corrects errors that may occur in the physical layer.</p>
 
-<h4 id="layer-3-network-layer">Layer 3: Network Layer</h4>
+<h3 id="layer-3-network-layer">Layer 3: Network Layer</h3>
 
 <p>The network layer is responsible for transferring data packets between two different networks. It receives frames from the DL layer, and delivers them to their intended destinations based on the node’s logical address, such as IP address. It also breaks segments from the transport layer into packers on the sending device and reassembles these packets on the receiving device. This layer is also responsible for finding the best physical path for the data to reach its destination, this is done by special nodes in the layer known as routers and this process is called routing.</p>
 
-<h4 id="layer-4-transport-layer">Layer 4: Transport Layer</h4>
+<h3 id="layer-4-transport-layer">Layer 4: Transport Layer</h3>
 
 <p>The transport layer manages the delivery and error checking of data packages. It controls the size, sequencing and the transfer of data between systems and hosts. It also provides the acknowledgement of the successful data transmission and sends the next data if no error occurred. Although not developed under the OSI Model, the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are commonly categorized as layer-4 protocols within OSI. Transport Layer Security (TLS) provide security at this layer.</p>
 
-<h4 id="layer-5-session-layer">Layer 5: Session Layer</h4>
+<h3 id="layer-5-session-layer">Layer 5: Session Layer</h3>
 
 <p>The session layer controls the connections between computers. It establishes, manages and terminates the connections between two computers. This layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources. This layer is also responsible for session checkpointing and recovery in case the systems get disconnected in the middle of a data transfer. Session layer also include authentication and reconnection.</p>
 
-<h4 id="layer-6-presentation-layer">Layer 6: Presentation Layer</h4>
+<h3 id="layer-6-presentation-layer">Layer 6: Presentation Layer</h3>
 
 <p>The presentation layer prepares the data so that it can be used by the application layer. It formats, translates data for the application layer based on the syntax or semantics that the application accepts. Because of this, it is also called syntax layer. It can also handle encryption and decryption of data. It also compress the data received from the application layer before sending it to Session Layer.</p>
 
-<h4 id="layer-7-application-layer">Layer 7: Application Layer</h4>
+<h3 id="layer-7-application-layer">Layer 7: Application Layer</h3>
 
 <p>This layer is closet to the end user and both the user and the application layer interact directly with the application. Just for clarification, the applications are not part of the application layer, rather this layer is responsible for the protocols and data manipulation that the software uses to present data to the user. Some of the protocols in Application layer are HTTP, FTP, SMPT, Telnet, DNS etc.</p>
 

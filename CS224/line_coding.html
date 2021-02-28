@@ -11,7 +11,7 @@
 
   <title>
     
-      CS 224 - Computer Networks &middot; Atin Bainada
+      Line Coding &middot; Atin Bainada
     
   </title>
 
@@ -152,15 +152,13 @@
       </div>
 
       <div class="container content"><div class="post">
-  <h1 class="post-title">CS 224 - Computer Networks</h1>
+  <h1 class="post-title">Line Coding</h1>
   <span class="post-date"></span>
-  <h2 id="line-coding">Line Coding</h2>
+  <p>Line coding is the process of converting data into signal. At the sender’s end we convert sequence of bits into digital signal and at the receiver’s end the signal is recreated into bits by decoding the signal.</p>
 
-<p>Line coding is the process of converting data into signal. At the sender’s end we convert sequence of bits into digital signal and at the receiver’s end the signal is recreated into bits by decoding the signal.</p>
+<h2 id="types-of-line-coding">Types of line coding</h2>
 
-<h3 id="types-of-line-coding">Types of line coding</h3>
-
-<h4 id="non-return-to-zero-nrz">Non-Return to Zero (NRZ)</h4>
+<h3 id="non-return-to-zero-nrz">Non-Return to Zero (NRZ)</h3>
 
 <p>In this line coding 1 is represented by a positive voltage and 0 by a negative voltage.</p>
 
@@ -180,7 +178,7 @@
   <img src="./img/NRZI.png" alt="NRZI" width="50%" />
 </div>
 
-<h4 id="return-to-zero-rz">Return to Zero (RZ)</h4>
+<h3 id="return-to-zero-rz">Return to Zero (RZ)</h3>
 
 <p>In this line code the signal drops to zero voltage between each bit interval. In this case the signal is self-clocking i.e. the receiver can always resynchronize it’s clock using the clock recovery process hence it eliminates the problem of baseline wander.</p>
 
@@ -190,7 +188,7 @@
 
 <p>Main disadvantage of RZ encoding is that it requires twice the bandwidth to get the same data transfer rate as compared to NRZ encoding. Another problem is that it uses three levels of voltages. Due to these deficiencies this encoding is not used today. Instead, it has been replaced by Manchester and differential Manchester encodings.</p>
 
-<h4 id="manchester-encoding">Manchester Encoding</h4>
+<h3 id="manchester-encoding">Manchester Encoding</h3>
 
 <p>In this encoding each bit is represented as either low in first half and high in second half or high in first half and low in second half. It is a self clocking signal.
 It is also known as <strong>Phase Encoding</strong> (PE).</p>
@@ -207,7 +205,7 @@ It is also known as <strong>Phase Encoding</strong> (PE).</p>
 
 <p>The another problem is with the polarity of the signal. If a Manchester encoded signal gets inverted during communication, it is transformed from one convention to other. This ambiguity can be overcome using differential Manchester encoding.</p>
 
-<h4 id="differential-manchester-encoding">Differential Manchester Encoding</h4>
+<h3 id="differential-manchester-encoding">Differential Manchester Encoding</h3>
 
 <p>In this encoding there is always a transition in the middle of the bit interval. 0s and 1s are determined using the beginning of the bit interval. If there is a transition at the beginning of the interval than the bit is 0. If there is no transition at the beginning then the bit is 1.</p>
 
@@ -219,7 +217,7 @@ It is also known as <strong>Phase Encoding</strong> (PE).</p>
 
 <p>It is also known as Biphase Mark Code, digital frequency modulation, F2F. And it is used in the IEEE 802.5 standard for Token Ring LANs.</p>
 
-<h4 id="other-encodings-and-baud-rate">Other encodings and Baud rate</h4>
+<h3 id="other-encodings-and-baud-rate">Other encodings and Baud rate</h3>
 
 <ul>
   <li>4B/5B Encoding: As the name implies, in this encoding each 4 bit block of data is mapped to a 5 bit block to avoid the problem of consecutive 1s or 0s.</li>
