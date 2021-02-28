@@ -1,15 +1,14 @@
 ---
-title: CS 224 - Computer Networks
+title: Framing
 layout: post
 ---
 
-## Framing
 
 In the line_coding lecture we saw how to transmit a sequence of bits over a point-to-point link, or from adaptor to adaptor. From previous chapters we know that blocks of data (called _frames_ at this level), not bit streams, are exchanged between nodes. The network adaptor at the nodes handles the exchange of frames. Recognizing exactly what set of bits constitute a frame, or determining start and end of a frame, is the central challenge faced by the adaptor. There are many ways to address this framing problem. Here three different protocols are described to address this problem. Here we are discussing framing in context of point-to-point link but this is a fundamental problem that must also be addressed in multiple access networks like Ethernet and Wi-Fi.
 
-### Some Protocols
+## Some Protocols
 
-#### Byte-Oriented Protocols (PPP)
+### Byte-Oriented Protocols (PPP)
 
 It is one of the oldest approach to framing. In this protocol each frame is viewed as a collection of bytes (characters) instead of bits. At high level, there are two approaches to this type of protocols.
 

@@ -1,15 +1,13 @@
 ---
-title: CS 224 - Computer Networks
+title: The OSI Model
 layout: post
 ---
-
-## The OSI Model
 
 The **Open Systems Interconnection** (OSI) model is a conceptual model, created by the International Organization for Standardization. It characterize the communication functions of a computer system irrespective of the system's underlying internal structure and technology.
 
 TL;DR - The OSI model provides a standard for different computer systems to communicate using standard protocols.
 
-### 7 Layers of the OSI Model
+## 7 Layers of the OSI Model
 
 The following table from this [wikipedia article](https://en.wikipedia.org/wiki/OSI_model) summarizes the functions of each layer.
 
@@ -87,30 +85,30 @@ The following table from this [wikipedia article](https://en.wikipedia.org/wiki/
 <td style="background:#e9988a;">Transmission and reception of raw bit streams over a physical medium
 </td></tr></tbody></table>
 
-#### Layer 1: Physical Layer
+### Layer 1: Physical Layer
 
 This layer is responsible for the transmission and reception of raw data between a device and a physical transmission medium, such as cables and switches. It also converts the digital data into electrical, radio or optical signals to make it transferable via a physical medium.
 
-#### Layer 2: Data Link Layer
+### Layer 2: Data Link Layer
 
 The data link layer provides node-to-node data transfer. In this layer data is transferred between two devices on the SAME network. DLL takes packet from the network layer and breaks them into smaller pieces called frames. DLL detects and possibly corrects errors that may occur in the physical layer.
 
-#### Layer 3: Network Layer
+### Layer 3: Network Layer
 
 The network layer is responsible for transferring data packets between two different networks. It receives frames from the DL layer, and delivers them to their intended destinations based on the node's logical address, such as IP address. It also breaks segments from the transport layer into packers on the sending device and reassembles these packets on the receiving device. This layer is also responsible for finding the best physical path for the data to reach its destination, this is done by special nodes in the layer known as routers and this process is called routing.
 
-#### Layer 4: Transport Layer
+### Layer 4: Transport Layer
 
 The transport layer manages the delivery and error checking of data packages. It controls the size, sequencing and the transfer of data between systems and hosts. It also provides the acknowledgement of the successful data transmission and sends the next data if no error occurred. Although not developed under the OSI Model, the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are commonly categorized as layer-4 protocols within OSI. Transport Layer Security (TLS) provide security at this layer.
 
-#### Layer 5: Session Layer
+### Layer 5: Session Layer
 
 The session layer controls the connections between computers. It establishes, manages and terminates the connections between two computers. This layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources. This layer is also responsible for session checkpointing and recovery in case the systems get disconnected in the middle of a data transfer. Session layer also include authentication and reconnection.
 
-#### Layer 6: Presentation Layer
+### Layer 6: Presentation Layer
 
 The presentation layer prepares the data so that it can be used by the application layer. It formats, translates data for the application layer based on the syntax or semantics that the application accepts. Because of this, it is also called syntax layer. It can also handle encryption and decryption of data. It also compress the data received from the application layer before sending it to Session Layer.
 
-#### Layer 7: Application Layer
+### Layer 7: Application Layer
 
 This layer is closet to the end user and both the user and the application layer interact directly with the application. Just for clarification, the applications are not part of the application layer, rather this layer is responsible for the protocols and data manipulation that the software uses to present data to the user. Some of the protocols in Application layer are HTTP, FTP, SMPT, Telnet, DNS etc.
