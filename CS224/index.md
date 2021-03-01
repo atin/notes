@@ -13,4 +13,3 @@ layout: page
 - [Wireless Networks](wireless_networks)
 
 Some [references](references) and [extra notes](extra) related to the course.
-

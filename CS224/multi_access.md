@@ -13,7 +13,7 @@ Modern Ethernet links are now largely P2P; that is, they connect one host to an 
 
 ## Access Protocol
 
-We'll now discuss the algorithm that controls access to the shared Ethernet link. This algorithm is commonly called the Ethernet's *media access control* (MAC). It is implemented in the hardware on the network adapter.
+We'll now discuss the algorithm that controls access to the shared Ethernet link. This algorithm is commonly called the Ethernet's _media access control_ (MAC). It is implemented in the hardware on the network adapter.
 
 First let's describe the Ethernet's frame format and addresses.
 
@@ -36,6 +36,3 @@ The receiver side of the Ethernet is simple, the main algorithm implemented at t
 If the line is idle, the adaptor transmits the frame without negotiating other nodes. The upper bound of 1500 bytes in the message means that the adaptor can occupy the line for only a fixed length of time.
 
 If the line is busy, the adapter waits for the line to go idle and then it waits for $$9.6 \mu s$$ (so that the receiver can process the previous frame) and then transmits the frame.
-
-
-
