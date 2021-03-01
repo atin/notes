@@ -11,5 +11,31 @@ The most common example of a multi-access network is Ethernet. The more general 
 
 Modern Ethernet links are now largely P2P; that is, they connect one host to an Ethernet switch, or they interconnect switches, hence the "multi access" algorithm is not used much in today's Ethernet, but a variant is now used in [wireless networks](wireless_networks), such as 802.11 networks (also known as Wi-Fi).
 
+## Access Protocol
+
+We'll now discuss the algorithm that controls access to the shared Ethernet link. This algorithm is commonly called the Ethernet's *media access control* (MAC). It is implemented in the hardware on the network adapter.
+
+First let's describe the Ethernet's frame format and addresses.
+
+#### Frame Format and Ethernet Addresses
+
+Each Ethernet frame is of the following format.
+
+<div style="text-align: center;">
+  <img src="./img/ethernet_frame.png" alt="ethernet frame" width="50%">
+</div>
+
+The preamble helps the receiver to synchronize with the signal. Both the source and destination host are identified with 48-bit address. Finding the correct higher level protocol to process the received packet is called demultiplexing, the packet type field serves as the demultiplexing key. Each frame contains up to 1500 bytes of data. Minimally, a frame must contain at least 46 bytes of data. The reason for this minimum size is that the frame must be long enough to detect a collision. Finally each frame also have a 32-bit CRC. The sending adapter attaches the preamble and CRC before transmitting, and the receiving adapter removes them.
+
+Every Ethernet adaptor in the world has a unique Ethernet address. Ethernet addresses are printed as six numbers separated by colons. Each number is given by a pair of hexadecimal digits and corresponds to 1 byte of the 6 byte address
+
+### Transmitter Algorithm
+
+The receiver side of the Ethernet is simple, the main algorithm implemented at the sender's side. The transmitter algorithm is defined as follows.
+
+If the line is idle, the adaptor transmits the frame without negotiating other nodes. The upper bound of 1500 bytes in the message means that the adaptor can occupy the line for only a fixed length of time.
+
+If the line is busy, the adapter waits for the line to go idle and then it waits for $$9.6 \mu s$$ (so that the receiver can process the previous frame) and then transmits the frame.
+
 
 

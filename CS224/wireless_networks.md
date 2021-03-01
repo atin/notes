@@ -20,3 +20,8 @@ A second spread spectrum technique, called _direct sequence_, adds redundancy fo
 <div style="text-align: center;">
   <img src="./img/chipping_seq.png" alt="4-bit chipping sequence" width="50%">
 </div>
+
+
+## Wi-Fi (802.11)
+
+
